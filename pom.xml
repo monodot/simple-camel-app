@@ -12,6 +12,12 @@
   <name>Simple Camel App</name>
   <description>A simple Camel app for testing and playing around with</description>
 
+  <!-- Required for Maven Release Plugin to work -->
+  <scm>
+    <developerConnection>scm:git:git@github.com:monodot/simple-camel-app.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -86,6 +92,11 @@
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+      </plugin>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
