@@ -16,6 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <spring.boot-version>2.1.4.RELEASE</spring.boot-version>
+    <!-- A sensible default for the 'revision' property when running a local build -->
     <revision>0-SNAPSHOT</revision>
   </properties>
 
