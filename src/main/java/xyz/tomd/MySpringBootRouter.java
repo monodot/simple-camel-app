@@ -13,8 +13,11 @@ public class MySpringBootRouter extends RouteBuilder {
 
     @Override
     public void configure() {
-        from("jetty:http://0.0.0.0:8080/hello")
+        from("jetty:http://0.0.0.0:8088/hello")
                 .setBody(constant("Hello world!"));
+
+        from("timer:mytimer?period=5000")
+                .bean("myBean");
     }
 
 }
